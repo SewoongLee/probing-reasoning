@@ -1,6 +1,6 @@
 import random
 
-def nshot_chats(nshot_data: list, n: int, question: str) -> dict:
+def nshot_chats(nshot_data: list, n: int, question: str, prompt: str = "Let's think step by step.") -> dict:
 
     def question_prompt(s):
         return f'Question: {s}'
@@ -22,7 +22,7 @@ def nshot_chats(nshot_data: list, n: int, question: str) -> dict:
         chats.append(
             {"role": "assistant", "content": answer_prompt(qna["answer"])})
 
-    chats.append({"role": "user", "content": question_prompt(question)+" Let's think step by step. At the end, you MUST write the answer as an integer after '####'."})
+    chats.append({"role": "user", "content": question_prompt(question) + " " + prompt + " At the end, you MUST write the answer as an integer after '####'."})
 
     return chats
 
