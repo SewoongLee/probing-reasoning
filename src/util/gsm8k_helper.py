@@ -22,7 +22,12 @@ def nshot_chats(nshot_data: list, n: int, question: str, prompt: str = "Let's th
         chats.append(
             {"role": "assistant", "content": answer_prompt(qna["answer"])})
 
-    chats.append({"role": "user", "content": question_prompt(question) + " " + prompt + " At the end, you MUST write the answer as an integer after '####'."})
+    chats.append({
+        "role": "user", 
+        "content": question_prompt(question) + " " 
+        + prompt 
+        + " At the end, you MUST write the answer as an integer after '####'."
+        })
 
     return chats
 
