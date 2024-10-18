@@ -1,0 +1,96 @@
+[Question]
+John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very important at home.  He tries to get home in 4 hours but spends the first 2 hours in standstill traffic.  He spends the next half-hour driving at a speed of 30mph, before being able to drive the remaining time of the 4 hours going at 80 mph.  How far is he from home at the end of those 4 hours?
+
+[meta-llama/Llama-3.2-3B-Instruct]
+Answer: John's original distance is 60 mph * 3 hours = 180 miles.
+He then turns around and drives back home, so the total distance traveled is 180 + 180 = 360 miles.
+
+However, he spends the first 2 hours in standstill traffic, which is 60 mph * 2 hours = 120 miles.
+
+Then he drives 30 minutes at 30 mph, which is 30/60 = 0.5 hours. So the distance covered is 30 mph * 0.5 hours = 15 miles.
+
+The remaining distance to home is 360 - 120 - 15 = 225 miles.
+
+Now, he drives the remaining 2 hours at 80 mph. So the distance covered is 80 mph * 2 hours = 160 miles.
+
+Therefore, the distance from home at the end of those 4 hours is 225 - 160 = 65 miles.
+#### 65
+
+[Ground Truth]
+When he turned around he was 3*60=<<3*60=180>>180 miles from home
+He was only able to drive 4-2=<<4-2=2>>2 hours in the first four hours
+In half an hour he goes 30*.5=<<30*.5=15>>15 miles
+He then drives another 2-.5=<<2-.5=1.5>>1.5 hours
+In that time he goes 80*1.5=<<80*1.5=120>>120 miles
+So he drove 120+15=<<120+15=135>>135 miles
+So he is 180-135=<<180-135=45>>45 miles away from home
+#### 45
+
+Current Accuracy: 0.889
+
+
+[Question]
+Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for $1.5 each. It costs $3 a year to water and feed the tree. How many years will it take before he starts earning money on the lemon tree?
+
+[meta-llama/Llama-3.2-3B-Instruct]
+Answer: The initial cost is $90.
+Each year, the tree grows 7 lemons and earns $1.5 per lemon. So, each year it earns $1.5 * 7 = $10.5.
+Each year it costs $3 to water and feed the tree.
+So, the net gain per year is $10.5 - $3 = $7.5.
+Since the initial cost is $90, Carlos needs to earn $90 in order to break even.
+The number of years it will take to break even is $90 / $7.5 = 12.
+#### 12
+
+[Ground Truth]
+He makes $10.5 selling lemons each year because 7 x 1.5 = <<7*1.5=10.5>>10.5
+He earns $7.5 each year from the lemon tree because 10.5 - 3 = <<10.5-3=7.5>>7.5
+It will take 12 years to earn enough to pay off the tree because 90 / 7.5 = <<90/7.5=12>>12
+He will make money in year 13 because 12 + 1 = <<12+1=13>>13
+#### 13
+
+Current Accuracy: 0.846
+
+
+[Question]
+Melanie is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, 2 more to the red house, and half of what was left at the orange house. If Melanie has 5 vacuum cleaners left, how many did she start with?
+
+[meta-llama/Llama-3.2-3B-Instruct]
+Answer: Melanie started with an unknown number of vacuum cleaners, let's call it X.
+She sold a third of them at the green house, so she was left with X - X/3 = 2X/3 vacuum cleaners.
+Then, she sold 2 more to the red house, leaving her with 2X/3 - 2 vacuum cleaners.
+She sold half of what was left at the orange house, so she was left with (2X/3 - 2)/2 = X/6 vacuum cleaners.
+Since she has 5 vacuum cleaners left, we know that X/6 = 5.
+Therefore, X = 5 * 6 = 30.
+#### 30
+
+[Ground Truth]
+First multiply the five remaining vacuum cleaners by two to find out how many Melanie had before she visited the orange house: 5 * 2 = <<5*2=10>>10
+Then add two to figure out how many vacuum cleaners she had before visiting the red house: 10 + 2 = <<10+2=12>>12
+Now we know that 2/3 * x = 12, where x is the number of vacuum cleaners Melanie started with. We can find x by dividing each side of the equation by 2/3, which produces x = 18
+#### 18
+
+Current Accuracy: 0.786
+
+
+[Question]
+Two trains leave San Rafael at the same time. They begin traveling westward, both traveling for 80 miles. The next day, they travel northwards, covering 150 miles. What's the distance covered by each train in the two days?
+
+[meta-llama/Llama-3.2-3B-Instruct]
+Answer: For the first day, the trains travel 80 miles each, so each train travels 80 miles.
+#### 80
+
+For the second day, the trains travel 150 miles north. Since they are traveling in the same direction, we need to find the total distance they traveled in the same direction, which is 80 + 80 = 160 miles.
+
+Then, to find the distance each train traveled north, we need to divide the total distance by 2. Since the trains are traveling in the same direction, we can think of this as them covering 160 miles in the same direction, and then splitting that 160 miles in half.  160 miles is 80 miles in the same direction (north), so the distance each train traveled north is 80 miles.
+#### 80
+
+[Ground Truth]
+On the first day, the trains covered 2 trains * 80 miles/train = <<2*80=160>>160 miles together.
+They also covered 150 miles/train * 2 trains = <<150*2=300>>300 miles together on the second day.
+The combined distance the two trains covered in the two days is 300 miles + 160 miles = <<300+160=460>>460 miles
+The average distance for the two days is 460 miles / 2 trains = <<460/2=230>>230 miles/train
+#### 230
+
+Current Accuracy: 0.765
+
+
