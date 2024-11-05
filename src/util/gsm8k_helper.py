@@ -32,9 +32,7 @@ def nshot_chats(nshot_data: list, n: int, question: str, prompt: str = "Let's th
     return chats
 
 
-def extract_num_from_ans(answer: str, eos=None):
-    if eos:
-        answer = answer.split(eos)[0].strip()
+def extract_num_from_ans(answer: str):
 
     answer = answer.split('####')[-1].strip()
 
