@@ -16,6 +16,12 @@ The experiments were conducted primarily on lightweight LLMs like Llama 3.2-3B a
 - Visualization of internal representations through PCA and other metrics.
 - Evaluation of reasoning accuracy via logits and hidden state analysis.
 
+## Visualizing SVM Decision Boundaries
+
+For example, the decision boundary created by the SVM highlights regions where incorrect reasoning occurs. The area enclosed by the red line in the figure below shows the **"incorrect area"**, where reasoning errors can be identified based on internal representations (neural activations).
+
+![SVM Decision Boundary](outputs/svm.png)
+
 ## Tutorial
 
 For a detailed step-by-step demonstration, we recommend running the following notebook:
